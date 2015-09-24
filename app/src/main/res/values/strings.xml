@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">User application</string>
+
+    <string name="title_section1">Home</string>
+    <string name="title_section2">Company</string>
+    <string name="title_section3">Offices</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_office_fragment">Hello office Fragment!</string>
+    <string name="test_Company_History">Hier komt de history van eht bedrijf, redeiljk kort in een paar regels. Deze string is om te testen hoe het er uit komt te zien als voorbeeld.</string>
+</resources>
