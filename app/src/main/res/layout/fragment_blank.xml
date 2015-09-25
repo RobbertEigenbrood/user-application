@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgrounda3"
     >
 <FrameLayout
     android:layout_width="match_parent"
@@ -25,7 +26,10 @@
         android:layout_width="match_parent"
         android:layout_height="634dp"
         android:text="@string/hello_blank_fragment"
-        android:layout_gravity="left|bottom" />
+        android:layout_gravity="left|bottom"
+        android:textColor="#FFFFFF"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" />
 
 
 </FrameLayout>

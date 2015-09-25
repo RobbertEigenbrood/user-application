@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity
         switch(position)
         {
             case 0:
-                fragment = new CompanyFragment();
+                fragment = new HomeFragment();
                 break;
             case 1:
                 fragment = new CompanyFragment();
