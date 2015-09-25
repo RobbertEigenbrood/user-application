@@ -14,8 +14,17 @@
 
     <string name="splash_screen">temp splash</string>
 
+    <string name="company_button">Go to website</string>
+    <string name="url_link">http://www.yahoo.com</string>
+
 <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment \n test \n test \n st \n test \ntest \n
+    test \n test \n st \n test \ntest \n
+    test \n test \n st \n test \ntest \n
+    test \n test \n st \n test \ntest \n
+    test \n test \n st \n test \ntest \n
+    test \n test \n st \n test \ntest \n
+    test \n test \n st \n test \ntest \n</string>
     <string name="hello_office_fragment">Hello office Fragment!</string>
     <string name="test_Company_History">Hier komt de history van eht bedrijf, redeiljk kort in een paar regels. Deze string is om te testen hoe het er uit komt te zien als voorbeeld.</string>
 </resources>

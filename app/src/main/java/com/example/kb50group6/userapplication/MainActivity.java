@@ -1,25 +1,21 @@
 package com.example.kb50group6.userapplication;
 
 import android.app.Activity;
-import android.support.v4.app.ListFragment;
+import android.content.ActivityNotFoundException;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.FragmentManager;
-import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
-
-import com.example.kb50group6.userapplication.dummy.DummyContent;
+import android.widget.Button;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity
@@ -36,6 +32,7 @@ public class MainActivity extends AppCompatActivity
      */
     private CharSequence mTitle;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +46,10 @@ public class MainActivity extends AppCompatActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
     }
+
+
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
@@ -60,10 +60,10 @@ public class MainActivity extends AppCompatActivity
         switch(position)
         {
             case 0:
-                fragment = new BlankFragment();
+                fragment = new CompanyFragment();
                 break;
             case 1:
-                fragment = new BlankFragment();
+                fragment = new CompanyFragment();
                 break;
             case 2:
                 fragment = new OfficeFragment2();
@@ -131,6 +131,7 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+
 
     public void onClickButton(View v)
     {
