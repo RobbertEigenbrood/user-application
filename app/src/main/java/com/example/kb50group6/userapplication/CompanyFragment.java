@@ -23,9 +23,14 @@ public class CompanyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank, container, false);
+        return inflater.inflate(R.layout.fragment_company, container, false);
 
     }
+    /*
+    * TODO: Gallery zoals op dit youtube filmpie.
+    * https://www.youtube.com/watch?v=gOQnzTBR7wA
+    *
+    * */
 
 
 }
