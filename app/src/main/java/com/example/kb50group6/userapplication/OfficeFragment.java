@@ -12,9 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.app.Fragment;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CursorAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -27,7 +29,6 @@ import android.widget.Toast;
 public class OfficeFragment extends Fragment implements AdapterView.OnItemClickListener {
 
 
-    Uri contacts = ContactsContract.Contacts.CONTENT_URI;
     String URL = "content://com.example.user.contentprovider.AS3DB/offices";
 
     Uri offices = Uri.parse(URL);
@@ -54,12 +55,13 @@ public class OfficeFragment extends Fragment implements AdapterView.OnItemClickL
                 null,
                 null,
                 null,
-                null
+                "o_city"
         );
         c = cursorLoader.loadInBackground();
-        int[] views = new int[]{R.id.contactName};
+
+        int[] views = new int[]{R.id.office_city};
         String[] columns = new String[]{
-                offices+"o_city"
+                "o_city"
         };
 
 
@@ -71,6 +73,9 @@ public class OfficeFragment extends Fragment implements AdapterView.OnItemClickL
                 views,
                 CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
 
+       // c.moveToFirst();
+        //TextView textView = (TextView)rootView.findViewById(R.id.contactName);
+        //textView.setText(c.getString(c.getColumnIndex("o_city")));
 
 
         listView = (ListView)rootView.findViewById(R.id.listView);

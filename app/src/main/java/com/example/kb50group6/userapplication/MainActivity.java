@@ -62,10 +62,10 @@ public class MainActivity extends AppCompatActivity
         switch(position)
         {
             case 0:
-                fragment = new BlankFragment();
+                fragment = new OfficeFragment();
                 break;
             case 1:
-                fragment = new BlankFragment();
+                fragment = new OfficeFragment();
                 break;
             case 2:
                 fragment = new OfficeFragment();

@@ -52,7 +52,7 @@ public class OfficeActivity extends AppCompatActivity {
                 null,
                 null,
                 null,
-                null
+                "o_city"
         );
         c = cursorLoader.loadInBackground();
         /*int[] views = new int[]{R.id.contactName,R.id.contactID};
@@ -72,8 +72,8 @@ public class OfficeActivity extends AppCompatActivity {
                 */
         //c.moveToPosition(Integer.parseInt(position));
         c.moveToPosition(Integer.parseInt(position));
-        textViewaddress.setText(c.getString(c.getColumnIndex(offices+"/o_city")));
-        textviewNumber.setText(c.getString(c.getColumnIndex(offices+"/o_telnr")));
+        textViewaddress.setText(c.getString(c.getColumnIndex("o_city")));
+        textviewNumber.setText(c.getString(c.getColumnIndex("o_telnr")));
 
 
     }
@@ -104,7 +104,7 @@ public class OfficeActivity extends AppCompatActivity {
     {
         Toast.makeText(this,"Making call...",Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(Intent.ACTION_CALL,
-                Uri.parse("tel:"+c.getString(c.getColumnIndex(ContactsContract.Contacts._ID))));
+                Uri.parse("tel:"+c.getString(c.getColumnIndex("o_telnr"))));
         startActivity(intent);
     }
 }
