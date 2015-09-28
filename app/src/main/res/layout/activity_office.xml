@@ -9,6 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="30sp"
         android:text="@string/telephoneText"
         android:id="@+id/textNumber"
         android:layout_alignParentTop="true"
@@ -17,6 +18,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="30sp"
         android:text="@string/addressText"
         android:id="@+id/textAddress"
         android:layout_below="@+id/textNumber"
@@ -25,6 +27,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="30sp"
         android:text="New Text"
         android:id="@+id/textViewNumber"
         android:layout_alignParentTop="true"
@@ -35,9 +38,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="30sp"
         android:text="New Text"
         android:id="@+id/textViewAddress"
         android:layout_below="@+id/textNumber"
-        android:layout_toEndOf="@+id/textAddress" />
+        android:layout_toEndOf="@+id/textAddress"
+        android:onClick="onClickLocation" />
 
 </RelativeLayout>

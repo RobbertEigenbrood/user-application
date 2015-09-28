@@ -72,7 +72,7 @@ public class OfficeActivity extends AppCompatActivity {
                 */
         //c.moveToPosition(Integer.parseInt(position));
         c.moveToPosition(Integer.parseInt(position));
-        textViewaddress.setText(c.getString(c.getColumnIndex("o_city")));
+        textViewaddress.setText(c.getString(c.getColumnIndex("o_address")));
         textviewNumber.setText(c.getString(c.getColumnIndex("o_telnr")));
 
 
@@ -106,5 +106,18 @@ public class OfficeActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_CALL,
                 Uri.parse("tel:"+c.getString(c.getColumnIndex("o_telnr"))));
         startActivity(intent);
+    }
+    public void onClickLocation(View v)
+    {
+        // Create a Uri from an intent string. Use the result to create an Intent.
+        Uri gmmIntentUri = Uri.parse("google.streetview:cbll=46.414382,10.013988");
+
+// Create an Intent from gmmIntentUri. Set the action to ACTION_VIEW
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+// Make the Intent explicit by setting the Google Maps package
+        mapIntent.setPackage("com.google.android.apps.maps");
+
+// Attempt to start an activity that can handle the Intent
+        startActivity(mapIntent);
     }
 }
