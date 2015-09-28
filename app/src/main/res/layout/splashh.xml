@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:src="@drawable/android_robot"
+        android:src="@drawable/androidlogo"
         android:paddingLeft="70sp"
         android:paddingRight="70sp"
         android:layout_alignParentRight="true"
