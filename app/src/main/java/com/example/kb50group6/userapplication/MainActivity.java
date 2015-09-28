@@ -1,25 +1,31 @@
 package com.example.kb50group6.userapplication;
 
 import android.app.Activity;
-import android.content.ActivityNotFoundException;
 import android.net.Uri;
+import android.support.v4.app.ListFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.FragmentManager;
+import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
-import android.widget.Button;
-import android.widget.Toast;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
+import com.example.kb50group6.userapplication.dummy.DummyContent;
 
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks,
+        OfficeFragment.OnFragmentInteractionListener{
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -31,7 +37,6 @@ public class MainActivity extends AppCompatActivity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +51,7 @@ public class MainActivity extends AppCompatActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
-
     }
-
-
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
@@ -60,18 +62,17 @@ public class MainActivity extends AppCompatActivity
         switch(position)
         {
             case 0:
-                fragment = new HomeFragment();
+                fragment = new BlankFragment();
                 break;
             case 1:
-                fragment = new CompanyFragment();
+                fragment = new BlankFragment();
                 break;
             case 2:
-                fragment = new OfficeFragment2();
+                fragment = new OfficeFragment();
 
-               /* ListFragment mfragment = (ListFragment) getSupportFragmentManager().findFragmentById(R.id.);
-                mfragment.setListAdapter(new ArrayAdapter<DummyContent.DummyItem>(this,
-                        android.R.layout.simple_list_item_1, android.R.id.text1, DummyContent.ITEMS));
-                        */
+
+
+
                 break;
         }
 
@@ -132,7 +133,6 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-
     public void onClickButton(View v)
     {
         /*Fragment frag = getSupportFragmentManager().findFragmentById(R.id.container);
@@ -143,7 +143,10 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
 
+    }
 
 
     /**

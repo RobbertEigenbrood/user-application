@@ -27,4 +27,11 @@
     test \n test \n st \n test \ntest \n</string>
     <string name="hello_office_fragment">Hello office Fragment!</string>
     <string name="test_Company_History">Hier komt de history van eht bedrijf, redeiljk kort in een paar regels. Deze string is om te testen hoe het er uit komt te zien als voorbeeld.</string>
+    <string name="title_activity_test">TestActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_office">OfficeActivity</string>
+    <string name="telephoneText">Telephone number:</string>
+    <string name="addressText">Address:</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
